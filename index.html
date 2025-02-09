@@ -1,137 +1,198 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IT Blogg</title>
+  <title>IT Blog</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    /* Grundläggande styling */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+    /* Reset */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Global styling */
+    body {
+      font-family: 'Roboto', sans-serif;
       line-height: 1.6;
+      background: #f0f2f5;
+      color: #333;
     }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header with gradient and animations */
     header {
-      background-color: #333;
+      background: linear-gradient(135deg, #667eea, #764ba2);
       color: #fff;
-      padding: 20px 0;
+      padding: 40px 20px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
+
     header h1 {
-      margin: 0;
-      font-size: 2.5em;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3em;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-out;
     }
+
     header p {
-      margin: 5px 0 0;
       font-size: 1.2em;
+      animation: fadeInUp 1s ease-out;
     }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Navigation */
     nav {
-      background-color: #555;
+      background: #444;
+      padding: 10px 20px;
     }
+
     nav ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
+
     nav li {
-      display: inline-block;
+      margin: 0 15px;
     }
+
     nav a {
-      display: block;
-      padding: 15px 20px;
       color: #fff;
-      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 4px;
       transition: background 0.3s ease;
     }
+
     nav a:hover {
-      background-color: #444;
+      background: rgba(255, 255, 255, 0.2);
     }
+
+    /* Main container */
     .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
+
+    /* Article card */
     article {
+      background: #fff;
       margin-bottom: 40px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    article:last-of-type {
-      border-bottom: none;
+
+    article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
     }
+
     article h2 {
-      color: #333;
-      margin-top: 0;
-    }
-    .meta {
-      color: #777;
-      font-size: 0.9em;
+      font-family: 'Montserrat', sans-serif;
       margin-bottom: 10px;
+      color: #333;
     }
+
+    .meta {
+      font-size: 0.9em;
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    article p {
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
     footer {
-      background-color: #333;
+      background: #333;
       color: #fff;
       text-align: center;
-      padding: 15px 0;
+      padding: 20px;
     }
-    /* Responsiv design */
-    @media (max-width: 600px) {
-      nav a {
-        padding: 10px;
-        font-size: 0.9em;
-      }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
       header h1 {
-        font-size: 2em;
+        font-size: 2.5em;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav li {
+        margin: 10px 0;
+      }
+      .container {
+        margin: 20px auto;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>IT Blogg</h1>
-    <p>Din källa för de senaste IT-nyheterna, tipsen och insikterna</p>
+    <h1>IT Blog</h1>
+    <p>Your source for the latest IT news, tips, and insights</p>
   </header>
-  
+
   <nav>
     <ul>
-      <li><a href="#">Hem</a></li>
-      <li><a href="#">Om</a></li>
-      <li><a href="#">Kontakt</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Archive</a></li>
     </ul>
   </nav>
-  
+
   <div class="container">
-    <!-- Första bloggposten -->
+    <!-- First blog post -->
     <article>
-      <h2>Senaste IT-trenderna 2025</h2>
-      <p class="meta">Publicerad: 9 februari 2025 | Av: Admin</p>
-      <p>IT-världen förändras i rasande takt med framväxten av ny teknik som AI, IoT och molntjänster. I detta inlägg dyker vi ner i de senaste trenderna och diskuterar hur de påverkar både företag och privatpersoner. Håll dig uppdaterad om framtidens teknologier och deras tillämpningar i vardagen.</p>
+      <h2>Latest IT Trends 2025</h2>
+      <p class="meta">Published: February 9, 2025 | By: Admin</p>
+      <p>The IT world is evolving rapidly with emerging technologies such as AI, IoT, and cloud services. In this post, we dive into the latest trends and discuss how they impact both businesses and individuals. Stay updated on future technologies and their everyday applications.</p>
     </article>
     
-    <!-- Andra bloggposten -->
+    <!-- Second blog post -->
     <article>
-      <h2>Guide: Så säkrar du ditt nätverk</h2>
-      <p class="meta">Publicerad: 1 februari 2025 | Av: Admin</p>
-      <p>I en tid med ökande cyberhot är det viktigare än någonsin att skydda ditt nätverk. Denna guide erbjuder praktiska tips för att stärka din digitala säkerhet, från att använda starka lösenord till att implementera robusta brandväggar. Följ våra råd för att hålla ditt system säkert och tryggt.</p>
+      <h2>Guide: How to Secure Your Network</h2>
+      <p class="meta">Published: February 1, 2025 | By: Admin</p>
+      <p>In an era of increasing cyber threats, protecting your network is more crucial than ever. This guide offers practical tips to strengthen your digital security, from using strong passwords to implementing robust firewalls. Follow our advice to keep your system safe and secure.</p>
     </article>
     
-    <!-- Tredje bloggposten -->
+    <!-- Third blog post -->
     <article>
-      <h2>Recension: Den senaste smarta enheten</h2>
-      <p class="meta">Publicerad: 25 januari 2025 | Av: Admin</p>
-      <p>Vi tar en närmare titt på den senaste smarta enheten som har fångat marknadens uppmärksamhet. I denna recension granskar vi enhetens prestanda, design och användarvänlighet för att hjälpa dig avgöra om det är rätt val för dig. Upptäck vad som gör denna enhet unik i ett konkurrensutsatt segment.</p>
+      <h2>Review: The Latest Smart Device</h2>
+      <p class="meta">Published: January 25, 2025 | By: Admin</p>
+      <p>We take a closer look at the latest smart device that has captured the market's attention. In this review, we examine the device's performance, design, and user-friendliness to help you decide if it's the right choice for you. Discover what makes this device stand out in a competitive market.</p>
     </article>
   </div>
-  
+
   <footer>
-    <p>&copy; 2025 IT Blogg. Alla rättigheter reserverade.</p>
+    <p>&copy; 2025 IT Blog. All rights reserved.</p>
   </footer>
 </body>
 </html>
