@@ -3,194 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IT Blog</title>
+  <title>IT Blog - Home</title>
+  <link rel="stylesheet" href="style.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Global styling */
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      background: #f0f2f5;
-      color: #333;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Header with gradient and animations */
-    header {
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 3em;
-      margin-bottom: 10px;
-      animation: fadeInDown 1s ease-out;
-    }
-
-    header p {
-      font-size: 1.2em;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Navigation */
-    nav {
-      background: #444;
-      padding: 10px 20px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    nav li {
-      margin: 0 15px;
-    }
-
-    nav a {
-      color: #fff;
-      font-weight: 500;
-      padding: 8px 12px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    /* Main container */
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    /* Article card */
-    article {
-      background: #fff;
-      margin-bottom: 40px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    article:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    article h2 {
-      font-family: 'Montserrat', sans-serif;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .meta {
-      font-size: 0.9em;
-      color: #777;
-      margin-bottom: 15px;
-    }
-
-    article p {
-      margin-bottom: 15px;
-    }
-
-    /* Footer */
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* Responsive design */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.5em;
-      }
-      nav ul {
-        flex-direction: column;
-      }
-      nav li {
-        margin: 10px 0;
-      }
-      .container {
-        margin: 20px auto;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
     <h1>IT Blog</h1>
     <p>Your source for the latest IT news, tips, and insights</p>
   </header>
-
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Archive</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-
   <div class="container">
-    <!-- First blog post -->
-    <article>
-      <h2>Latest IT Trends 2025</h2>
-      <p class="meta">Published: February 9, 2025 | By: Admin</p>
-      <p>The IT world is evolving rapidly with emerging technologies such as AI, IoT, and cloud services. In this post, we dive into the latest trends and discuss how they impact both businesses and individuals. Stay updated on future technologies and their everyday applications.</p>
-    </article>
-    
-    <!-- Second blog post -->
-    <article>
-      <h2>Guide: How to Secure Your Network</h2>
-      <p class="meta">Published: February 1, 2025 | By: Admin</p>
-      <p>In an era of increasing cyber threats, protecting your network is more crucial than ever. This guide offers practical tips to strengthen your digital security, from using strong passwords to implementing robust firewalls. Follow our advice to keep your system safe and secure.</p>
-    </article>
-    
-    <!-- Third blog post -->
-    <article>
-      <h2>Review: The Latest Smart Device</h2>
-      <p class="meta">Published: January 25, 2025 | By: Admin</p>
-      <p>We take a closer look at the latest smart device that has captured the market's attention. In this review, we examine the device's performance, design, and user-friendliness to help you decide if it's the right choice for you. Discover what makes this device stand out in a competitive market.</p>
-    </article>
+    <section>
+      <h2>Recent Posts</h2>
+      <div class="article-card">
+        <h2><a href="blog1.html">Latest IT Trends 2025</a></h2>
+        <p class="meta">Published: February 9, 2025 | By: Admin</p>
+        <p>The IT world is evolving rapidly with emerging technologies such as AI, IoT, and cloud services. Discover the latest trends shaping the future.</p>
+        <p><a href="blog1.html">Read More &raquo;</a></p>
+      </div>
+      <div class="article-card">
+        <h2><a href="blog2.html">Guide: How to Secure Your Network</a></h2>
+        <p class="meta">Published: February 1, 2025 | By: Admin</p>
+        <p>In an era of increasing cyber threats, learn how to protect your network with practical tips and strategies for robust digital security.</p>
+        <p><a href="blog2.html">Read More &raquo;</a></p>
+      </div>
+      <div class="article-card">
+        <h2><a href="blog3.html">Review: The Latest Smart Device</a></h2>
+        <p class="meta">Published: January 25, 2025 | By: Admin</p>
+        <p>Get an in-depth look at the latest smart device that's taking the market by storm. See if it's the right fit for your tech needs.</p>
+        <p><a href="blog3.html">Read More &raquo;</a></p>
+      </div>
+    </section>
   </div>
-
   <footer>
     <p>&copy; 2025 IT Blog. All rights reserved.</p>
   </footer>
